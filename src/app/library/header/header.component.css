@@ -18,3 +18,8 @@ ul li{
 ul li:hover{
     opacity: .2;
 }
+
+.titulo{
+    font-size: 200%;
+    font-family: Georgia, serif;
+}

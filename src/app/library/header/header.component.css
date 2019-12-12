@@ -11,6 +11,7 @@ header.principal{
     height:10vh;
     background-color: rgb(235,235,235);
     box-shadow: 1px 1px 3px black;
+    position: fixed;
 }
 .altura-cabecalho{
     height:100%;

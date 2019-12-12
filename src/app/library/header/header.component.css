@@ -4,22 +4,25 @@ header.principal{
     background-color: rgb(235,235,235);
     box-shadow: 1px 1px 3px black;
 }
+.altura-cabecalho{
+    height:100%;
+}
 mat-icon{
-    font-size: 200%;
-}
-ul{
-    list-style: none;
-}
-ul li{
-    display: inline-block;
+    font-size:300%;
     transition: .6s;
 }
-
-ul li:hover{
-    opacity: .2;
+mat-icon:hover{
+    opacity: .6;
+    color: blue;
 }
 
 .titulo{
     font-size: 200%;
-    font-family: Georgia, serif;
+    font-family: 'Lucida Sans', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 4px white;
+    text-decoration: none;
+    color: black;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;  
 }

@@ -19,5 +19,4 @@ export class HeaderComponent implements OnInit {
     this.matIconRegistry.addSvgIcon('ajuda',
           this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/ajuda_icone.svg'));
     }
- LOGADO_DESLOGADO:String = 'sair';
 }

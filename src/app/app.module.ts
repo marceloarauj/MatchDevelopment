@@ -8,11 +8,13 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { HeaderComponent } from './library/header/header.component';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from "@angular/common/http";
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    LoginPageComponent,
 
   ],
   imports: [

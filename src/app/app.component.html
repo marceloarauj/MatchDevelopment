@@ -1,4 +1,4 @@
 <div>
-    <Header></Header>
+    <Header *ngIf="!ehRotaLogin()"></Header>
     <router-outlet></router-outlet>
 </div>

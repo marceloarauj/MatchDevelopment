@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'LoginPage',
   templateUrl: './login-page.component.html',

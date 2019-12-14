@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HeaderComponent } from './library/header/header.component';
 import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from "@angular/common/http";
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 
@@ -24,6 +26,8 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
     FormsModule,
     MatGridListModule,
     MatIconModule,
+    MatInputModule,
+    MatButtonModule,
     HttpClientModule
   ],
   providers: [],

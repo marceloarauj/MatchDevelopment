@@ -15,12 +15,7 @@
     width:100%;
     height: 100%;
 }
-input{
-    text-align: center;
-}
-input::placeholder{
-    text-align: center;
-}
+
 .remove-padding{
     padding:0px;
 }
@@ -35,4 +30,7 @@ input::placeholder{
 
 a{
     color: black;
+}
+.separa-icone-do-input{
+    margin-right: 19px;
 }

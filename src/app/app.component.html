@@ -1,4 +1,7 @@
 <div>
+    <!-- Componente cabeçalho só existe fora da pagina de login-->
     <Header *ngIf="!ehRotaLogin()"></Header>
+
     <router-outlet></router-outlet>
+    <!--Rodapé só existirá se não for login assim como o cabeçalho-->
 </div>

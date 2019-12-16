@@ -1,6 +1,11 @@
 @import '~@angular/material/theming';
 @include mat-core();
 
+.mat-form-field-wrapper{
+  padding-bottom: 10px;
+  padding-top: -10px;
+}
+
 $minha-cor: (
   50: rgb(0,0,0),
   100: rgb(0,0,0),

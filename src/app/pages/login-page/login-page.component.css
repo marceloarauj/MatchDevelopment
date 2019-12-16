@@ -1,9 +1,8 @@
 .modal-login{
-    height:70vh;
+    height:80vh;
     border-radius: 10%;
     border: 1px solid #AAAAAA;
-    background-color: #DDDDDD;
-    box-shadow: inset 0px -5px 30px 0px rgb(2, 1, 20);
+    box-shadow: inset 0px -5px 22px 0px black;
 }
 .linha-principal{
     height:100vh;
@@ -33,4 +32,12 @@ a{
 }
 .separa-icone-do-input{
     margin-right: 19px;
+}
+
+.botao-formatado{
+    width:100%;
+    color: #FFFFFF;
+}
+.tamanho-input{
+    width:100%;
 }

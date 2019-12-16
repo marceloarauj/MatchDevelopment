@@ -34,3 +34,8 @@ a{
 .separa-icone-do-input{
     margin-right: 19px;
 }
+
+.botao-formatado{
+    width:100%;
+    color: #FFFFFF;
+}

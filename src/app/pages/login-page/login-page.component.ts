@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LoginService} from '../login-page/login-page-services';
 @Component({
   selector: 'LoginPage',
   templateUrl: './login-page.component.html',
@@ -6,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor() { }
+  objetoLogin:LoginService;
+
+  constructor() {
+    this.objetoLogin = new LoginService();
+   }
 
   ngOnInit() {
   }
-
+  efetuarLogin(){
+    this.objetoLogin.efetuarLogin({'login':'marcelo','senha':'abc123'});
+  }
 }

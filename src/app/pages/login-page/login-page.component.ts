@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {LoginService} from '../login-page/login-page-services';
 @Component({
   selector: 'LoginPage',

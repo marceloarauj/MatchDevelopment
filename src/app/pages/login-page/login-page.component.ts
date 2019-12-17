@@ -5,17 +5,17 @@ import {LoginService} from '../login-page/login-page-services';
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.css']
 })
-export class LoginPageComponent implements OnInit {
+export class LoginPageComponent{
 
   objetoLogin:LoginService;
+  login:String;
+  senha:String;
 
   constructor() {
     this.objetoLogin = new LoginService();
    }
 
-  ngOnInit() {
-  }
   efetuarLogin(){
-    this.objetoLogin.efetuarLogin({'login':'marcelo','senha':'abc123'});
+    this.objetoLogin.efetuarLogin({'login':this.login,'senha':this.senha});
   }
 }

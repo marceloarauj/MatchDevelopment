@@ -13,7 +13,7 @@
                     <div class="col-8 remove-padding">
                         <mat-form-field appearance="outline" color="accent" class="tamanho-input">
                             <mat-icon matPrefix class="separa-icone-do-input">person_outline</mat-icon>
-                            <input matInput>
+                            <input [(ngModel)]="login" matInput>
                         </mat-form-field>                    
                     </div>
                 </div>
@@ -21,7 +21,7 @@
                     <div class="col-8 remove-padding">
                         <mat-form-field appearance="outline"color="accent" class="tamanho-input">
                             <mat-icon matPrefix class="separa-icone-do-input">vpn_key</mat-icon>
-                            <input type="password" matInput>
+                            <input [(ngModel)]="senha" type="password" matInput>
                         </mat-form-field>                    
                     </div>
                 </div>

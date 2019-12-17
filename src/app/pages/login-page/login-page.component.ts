@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {LoginService} from '../login-page/login-page-services';
 @Component({
   selector: 'LoginPage',
@@ -15,7 +15,12 @@ export class LoginPageComponent implements OnInit {
 
   ngOnInit() {
   }
+  login:String;
+  senha: String;
+
   efetuarLogin(){
-    this.objetoLogin.efetuarLogin({'login':'marcelo','senha':'abc123'});
+    alert(this.login);
+    alert(this.senha)
+    //this.objetoLogin.efetuarLogin({'login':'marcelo','senha':'abc123'});
   }
 }

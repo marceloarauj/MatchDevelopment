@@ -11,12 +11,14 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from "@angular/common/http";
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { ApresentacaoPageComponent } from './pages/apresentacao-page/apresentacao-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoginPageComponent,
+    ApresentacaoPageComponent,
 
   ],
   imports: [

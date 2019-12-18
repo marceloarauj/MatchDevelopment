@@ -5,14 +5,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(){
-  }
+  constructor(){}
 
-  //O Cabeçalho só existe se não for a tela de login
-  ehRotaLogin = function ehRotaLogin():Boolean{
+  rotaTemCabecalho = function rotaAtualTemCabecalho():Boolean{
     
     const rotaAtual = window.location.pathname;
     
-    return rotaAtual === "/login";
+    return rotaAtual === "/login" || rotaAtual === "/inicio";
   }
+
 }

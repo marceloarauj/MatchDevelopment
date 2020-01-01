@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export class LoginService {
 
-    URL_LOGIN = "http://localhost:4200/usuario/login";
+    URL_LOGIN = "http://localhost:5000/usuario/login";
 
     constructor() {}
 

@@ -16,6 +16,6 @@ export class LoginPageComponent{
    }
 
   efetuarLogin(){
-    this.objetoLogin.efetuarLogin({'login':this.login,'senha':this.senha});
+    this.objetoLogin.efetuarLogin({'Login':this.login,'Senha':this.senha});
   }
 }

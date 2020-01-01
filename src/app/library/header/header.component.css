@@ -23,7 +23,7 @@ mat-icon{
 }
 mat-icon:hover{
     opacity: .6;
-    color: rgb(5, 131, 5);
+    color: rgb(212, 41, 204);
 }
 
 .titulo{
@@ -34,4 +34,9 @@ mat-icon:hover{
     color: black;
     -webkit-user-select: none;
     -moz-user-select: -moz-none;  
+}
+button {
+    background: transparent;
+    border: none !important;
+    outline-style: none;
 }

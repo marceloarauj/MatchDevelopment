@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import {MenuComponent} from '../menu/menu.component';
+import {BehaviorSubject} from 'rxjs';
 @Component({
   selector: 'Header',
   templateUrl: './header.component.html',
@@ -18,5 +20,14 @@ export class HeaderComponent implements OnInit {
     //icone de ajuda 
     this.matIconRegistry.addSvgIcon('ajuda',
           this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/ajuda_icone.svg'));
+    }
+
+    DrawerAberto:Boolean = false;
+    ComportamentoDrawer = new BehaviorSubject<any>(false);
+
+    AlterarDrawer(){
+      //emite um valor para o drawer
+      this.DrawerAberto = !this.DrawerAberto;
+      this.ComportamentoDrawer.next(this.DrawerAberto);
     }
 }

@@ -5,18 +5,23 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSidenavModule} from '@angular/material/sidenav';
 import { HeaderComponent } from './library/header/header.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from "@angular/common/http";
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { MenuComponent } from './library/menu/menu.component';
+import { PerfilPageComponent } from './pages/perfil-page/perfil-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoginPageComponent,
+    MenuComponent,
+    PerfilPageComponent,
 
   ],
   imports: [
@@ -28,6 +33,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
     MatIconModule,
     MatInputModule,
     MatButtonModule,
+    MatSidenavModule,
     HttpClientModule
   ],
   providers: [],

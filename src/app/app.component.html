@@ -1,6 +1,7 @@
 <div>
     <!-- Componente cabeçalho só existe fora da pagina de login-->
-    <Header *ngIf="!ehRotaLogin()"></Header>
+    <Header *ngIf="!rotaTemCabecalho()"></Header>
+    
     <!--A página atual carregada pela rota-->
     <router-outlet></router-outlet>
 

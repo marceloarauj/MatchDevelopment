@@ -14,6 +14,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { MenuComponent } from './library/menu/menu.component';
 import { PerfilPageComponent } from './pages/perfil-page/perfil-page.component';
+import { ApresentacaoPageComponent } from './pages/apresentacao-page/apresentacao-page.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PerfilPageComponent } from './pages/perfil-page/perfil-page.component';
     LoginPageComponent,
     MenuComponent,
     PerfilPageComponent,
+    ApresentacaoPageComponent
 
   ],
   imports: [

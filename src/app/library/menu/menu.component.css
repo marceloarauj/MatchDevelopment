@@ -6,3 +6,17 @@
     left:0px;
     top:0px;
 }
+
+.formatar-botoes button{
+    width:100%;
+    color:white;
+    border-radius: 0px;
+    transition: .6s;
+}
+.formatar-botoes button:hover{
+    opacity: .8;
+}
+.remove-espacos{
+    padding:0px;
+    margin:0px;
+}

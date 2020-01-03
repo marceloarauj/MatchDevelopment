@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {LoginService} from '../login-page/login-page-services';
+import {LoginService} from '../login-page/login.service';
 @Component({
   selector: 'LoginPage',
   templateUrl: './login-page.component.html',
@@ -7,13 +7,11 @@ import {LoginService} from '../login-page/login-page-services';
 })
 export class LoginPageComponent{
 
-  objetoLogin:LoginService;
   login:String;
   senha:String;
 
-  constructor() {
-    this.objetoLogin = new LoginService();
-   }
+  constructor(private objetoLogin:LoginService) {
+  }
 
   efetuarLogin(){
     this.objetoLogin.efetuarLogin({'Login':this.login,'Senha':this.senha});

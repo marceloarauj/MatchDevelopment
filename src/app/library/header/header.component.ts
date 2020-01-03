@@ -22,12 +22,10 @@ export class HeaderComponent implements OnInit {
           this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/ajuda_icone.svg'));
     }
 
-    DrawerAberto:Boolean = false;
     ComportamentoDrawer = new BehaviorSubject<any>(false);
 
     AlterarDrawer(){
       //emite um valor para o drawer
-      this.DrawerAberto = !this.DrawerAberto;
-      this.ComportamentoDrawer.next(this.DrawerAberto);
+      this.ComportamentoDrawer.next(true);
     }
 }

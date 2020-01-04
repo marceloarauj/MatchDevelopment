@@ -1,6 +1,8 @@
 import { Component, OnInit,Input, ViewChild,HostListener } from '@angular/core';
 import { BehaviorSubject,Subscription } from 'rxjs';
 import { MatSidenav } from '@angular/material/sidenav';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'Menu',
@@ -13,7 +15,11 @@ export class MenuComponent implements OnInit {
   @Input() ComportamentoDrawer:BehaviorSubject<any>;
   AbrirOuFecharDrawer:boolean = false;
   // false = fechar , true = abrir , o true sempre vem do header
-  constructor() {}
+  constructor(private matIconRegistry: MatIconRegistry,private domSanitizer: DomSanitizer) {
+          
+    this.matIconRegistry.addSvgIcon('logo',
+          this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/match-logo.svg'));        
+  }
 
   ngOnInit() {
   }

@@ -17,6 +17,8 @@ export class RegistraIconesService {
     //icone de ajuda 
     this.matIconRegistry.addSvgIcon('ajuda',
           this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/ajuda_icone.svg'));
-        
+          
+    this.matIconRegistry.addSvgIcon('logo',
+          this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/match-logo.svg'));        
     }
 }

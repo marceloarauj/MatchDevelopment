@@ -1,5 +1,4 @@
 .modal-login{
-    height:80vh;
     border-radius: 10%;
     border: 1px solid #AAAAAA;
     box-shadow: inset 0px -5px 22px 0px black;
@@ -40,4 +39,15 @@ a{
 }
 .tamanho-input{
     width:100%;
+}
+.botoes-login{
+    transition: .6s;
+    margin-top:10%;
+    margin-bottom: 20%;
+    color:rgb(145, 23, 7);
+    font-size: 100%;
+}
+.botoes-login:hover{
+    background-color: rgb(145, 23, 7);
+    color: white;
 }

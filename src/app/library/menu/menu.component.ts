@@ -3,6 +3,7 @@ import { BehaviorSubject,Subscription } from 'rxjs';
 import { MatSidenav } from '@angular/material/sidenav';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import {MenuIconeService} from 'src/app/library/menu/menu-icone.service';
 
 @Component({
   selector: 'Menu',
@@ -14,12 +15,8 @@ export class MenuComponent implements OnInit {
   @ViewChild('drawer',{static:false}) public drawer:MatSidenav;
   @Input() ComportamentoDrawer:BehaviorSubject<any>;
   AbrirOuFecharDrawer:boolean = false;
-  // false = fechar , true = abrir , o true sempre vem do header
-  constructor(private matIconRegistry: MatIconRegistry,private domSanitizer: DomSanitizer) {
-          
-    this.matIconRegistry.addSvgIcon('logo',
-          this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/match-logo.svg'));        
-  }
+
+  constructor(private RegistroIcone:MenuIconeService) {}
 
   ngOnInit() {
   }

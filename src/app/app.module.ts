@@ -15,6 +15,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { MenuComponent } from './library/menu/menu.component';
 import { PerfilPageComponent } from './pages/perfil-page/perfil-page.component';
 import { ApresentacaoPageComponent } from './pages/apresentacao-page/apresentacao-page.component';
+import { PerfilGuard } from './guards/perfil.guard';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { ApresentacaoPageComponent } from './pages/apresentacao-page/apresentaca
     MatSidenavModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [PerfilGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

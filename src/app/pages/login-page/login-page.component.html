@@ -1,42 +1,86 @@
 <div class="container-fluid tela-login">
     <div class="row justify-content-center linha-principal">
-        <div class="col-4 align-self-center modal-login" style="padding: 0px;">
+        <div class="col-4 align-self-center modal-login">
             
             <!-- Parte de dentro do bloco de login-->
             <div class="container-fluid div-preenchida">
+                
                 <div class="row justify-content-center">
                     <div class="col-5 remove-padding">
                         <img class="formatar-largura-padding" src="../../../assets/logo-match.svg"/>
                     </div>
                 </div>
+
+                <div *ngIf="ehTelaRegistro" class="row justify-content-center">
+                    <div class="col-8 remove-padding">
+                        <mat-form-field appearance="outline" color="accent" class="tamanho-input">
+                            <mat-icon matPrefix class="separa-icone-do-input">face</mat-icon>
+                            <input [(ngModel)]="nome" placeholder="Nome" matInput>
+                        </mat-form-field>                    
+                    </div>
+                </div>
+
+                <div *ngIf="ehTelaRegistro" class="row justify-content-center">
+                    <div class="col-8 remove-padding">
+                        <mat-form-field appearance="outline" color="accent" class="tamanho-input">
+                            <mat-icon matPrefix class="separa-icone-do-input">mail</mat-icon>
+                            <input [(ngModel)]="email" placeholder="Email" matInput>
+                        </mat-form-field>                    
+                    </div>
+                </div>
+
                 <div class="row justify-content-center">
                     <div class="col-8 remove-padding">
                         <mat-form-field appearance="outline" color="accent" class="tamanho-input">
                             <mat-icon matPrefix class="separa-icone-do-input">person_outline</mat-icon>
-                            <input [(ngModel)]="login" matInput>
+                            <input [(ngModel)]="login" placeholder="Login" matInput>
                         </mat-form-field>                    
                     </div>
                 </div>
+
                 <div class="row justify-content-center">
                     <div class="col-8 remove-padding">
                         <mat-form-field appearance="outline"color="accent" class="tamanho-input">
                             <mat-icon matPrefix class="separa-icone-do-input">vpn_key</mat-icon>
-                            <input [(ngModel)]="senha" type="password" matInput>
+                            <input [(ngModel)]="senha" placeholder="Senha" type="password" matInput>
                         </mat-form-field>                    
                     </div>
                 </div>
-                <div class="row justify-content-center">
+
+                <div *ngIf="ehTelaRegistro" class="row justify-content-center">
                     <div class="col-8 remove-padding">
-                        <button class="botao-formatado" (click)="efetuarLogin()" mat-raised-button color="accent">Confirmar</button>
+                        <mat-form-field appearance="outline"color="accent" class="tamanho-input">
+                            <mat-icon matPrefix class="separa-icone-do-input">security</mat-icon>
+                            <input [(ngModel)]="senhaConfirmacao" placeholder="Confirmação" type="password" matInput>
+                        </mat-form-field>                    
                     </div>
                 </div>
+                
                 <div class="row justify-content-center separar-linha">
-                    <div class="col-6" style="text-align: center;">
-                        <a href="">Registrar</a>
+
+                    <div *ngIf="!ehTelaRegistro" class="col-8 remove-padding">
+                        <button class="botao-formatado" (click)="efetuarLogin()" mat-raised-button color="accent">Confirmar</button>
                     </div>
-                    <div class="col-6" style="text-align: center;">
-                        <a href="">Esqueceu a sua senha?</a>
+
+                    <div *ngIf="ehTelaRegistro" class="col-4">
+                        <button class="botao-formatado botoes-login" (click)="efetuarRegistro()" mat-raised-button>Registrar</button>
                     </div>
+
+                    <div *ngIf="ehTelaRegistro" class="col-4" style="text-align: center;">
+                        <button (click)="alternarTelaLoginRegistro(false)" class="botao-formatado botoes-login" mat-raised-button>Login</button>
+                    </div>
+
+                </div>
+                <div class="row justify-content-center separar-linha">
+
+                    <div *ngIf="!ehTelaRegistro" class="col-6" style="text-align: center;">
+                        <button (click)="alternarTelaLoginRegistro(true)" class="botao-formatado botoes-login" mat-raised-button>Registrar</button>
+                    </div>
+
+                    <div *ngIf="!ehTelaRegistro" class="col-6">
+                        <button class="botao-formatado botoes-login" mat-raised-button>Esqueceu a sua senha?</button>
+                    </div>
+
                 </div>                  
             </div>
 

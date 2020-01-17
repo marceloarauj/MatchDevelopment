@@ -1,0 +1,13 @@
+.barra-externa{
+    width:350px;
+    height:30px;
+    border: 1px sold black;
+    border-radius: 10%;
+}
+
+.barra-interna{
+    width:50%;
+    height:100%;
+    background-color: rgb(255,83,61);
+    border-radius: 10%;
+}

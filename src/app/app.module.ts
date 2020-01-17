@@ -16,6 +16,7 @@ import { MenuComponent } from './library/menu/menu.component';
 import { PerfilPageComponent } from './pages/perfil-page/perfil-page.component';
 import { ApresentacaoPageComponent } from './pages/apresentacao-page/apresentacao-page.component';
 import { PerfilGuard } from './guards/perfil.guard';
+import { ExpBarComponent } from './pages/perfil-page/components/exp-bar/exp-bar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PerfilGuard } from './guards/perfil.guard';
     LoginPageComponent,
     MenuComponent,
     PerfilPageComponent,
-    ApresentacaoPageComponent
+    ApresentacaoPageComponent,
+    ExpBarComponent
 
   ],
   imports: [

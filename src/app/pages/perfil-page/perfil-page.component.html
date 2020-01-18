@@ -1,14 +1,22 @@
 <div class="posicao-inicial">
-    <div class="container-fluid">
-        <div class="row">
+    <div class="container-fluid borda-personalizada">
+        <div class="row justify-content-center">
             <div class="col-4">
-                <img class="foto-perfil" src="../../../assets/logo.png"/>
+                <img class="foto-perfil" src="../../../assets/imagem-de-perfil-exemplo.jpg"/>
             </div>
-            <div class="col-8 informacoes-usuario">
-                <h1 class="nome-usuario">{{nome}}</h1>
-                <h3 class="nome-usuario">{{titulo}}</h3>
-                <BarraExp></BarraExp>
+        </div>
+        <div class="row justify-content-center descer-texto">
+            <div class="col-5 informacoes-usuario">
+                <h1>{{nome}}</h1>
             </div>
-        </div>  
+        </div> 
+        <div class="row justify-content-center">
+            <div class="col-3 informacoes-usuario">
+                <div class="row">
+                    <img class="icon-perfil" src="{{icon}}"/>   
+                    <p class="level-usuario">Lv.{{level}}</p>
+                </div>                
+            </div>
+        </div> 
     </div>
 </div>

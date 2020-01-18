@@ -8,11 +8,34 @@
 .foto-perfil{
     border-radius: 100%;
     width:60%;
-    height:60%;
+    height:25vh;
     border: 2px solid black;
     box-shadow: 3px 3px 3px gray;
 }
 
 .informacoes-usuario{
     color:black;
+}
+.descer-texto{
+    margin-top: 2%;
+    margin-left:10px;
+}
+.borda-personalizada{
+    height:90vh;
+    padding-top:10%;
+    padding-left:10%;
+    border-image-slice:0 0 0 0 fill;
+    border-image-width:20px 20px 20px 20px;
+    border-image-outset:0px 0px 0px 0px;
+    border-image-repeat:stretch stretch;
+    border-image-source: url('../../../assets/borda-perfil-dois.png');
+}
+.icon-perfil{
+    width:50px;
+    height:50px;
+    margin-right: 0px;
+}
+.level-usuario{
+    padding-left: 10px;
+    font-size:30pt;
 }

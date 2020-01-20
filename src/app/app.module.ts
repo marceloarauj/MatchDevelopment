@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { HeaderComponent } from './library/header/header.component';
@@ -39,7 +39,9 @@ import { ExpBarComponent } from './pages/perfil-page/components/exp-bar/exp-bar.
     MatInputModule,
     MatButtonModule,
     MatSidenavModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [PerfilGuard],
   bootstrap: [AppComponent]

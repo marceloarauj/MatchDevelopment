@@ -24,7 +24,8 @@
                     <div class="col-8 remove-padding">
                         <mat-form-field appearance="outline" color="accent" class="tamanho-input">
                             <mat-icon matPrefix class="separa-icone-do-input">mail</mat-icon>
-                            <input [(ngModel)]="email" placeholder="Email" matInput>
+                            <input matInput [(ngModel)]="email" placeholder="Email" [formControl]="this.formValidate.form">
+                            <mat-error *ngIf="this.formValidate.emailInvalido">{{this.formValidate.msgEmailInvalido}}</mat-error>
                         </mat-form-field>                    
                     </div>
                 </div>

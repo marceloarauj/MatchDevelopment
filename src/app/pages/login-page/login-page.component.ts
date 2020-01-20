@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {LoginService} from '../login-page/login.service';
+import {FormValidationService} from '../login-page/form-validation.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'LoginPage',
@@ -17,8 +18,12 @@ export class LoginPageComponent{
   email:String;
   senhaConfirmacao:String;
 
-  constructor(private objetoLogin:LoginService, private objetoRoute:Router) {
-  }
+  constructor(
+      private objetoLogin:LoginService, 
+      private objetoRoute:Router,
+      private formValidate:FormValidationService
+    ) 
+    {}
 
   alternarTelaLoginRegistro(valor){
     this.ehTelaRegistro = valor;
@@ -65,4 +70,6 @@ export class LoginPageComponent{
 
     return true;
   }
+
+  
 }

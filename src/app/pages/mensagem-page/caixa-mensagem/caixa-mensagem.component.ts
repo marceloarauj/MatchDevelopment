@@ -12,4 +12,5 @@ export class CaixaMensagemComponent implements OnInit {
   ngOnInit() {
   }
 
+  mensagem:String = "mensagem do usuario";
 }

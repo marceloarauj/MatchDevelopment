@@ -38,6 +38,38 @@ $minha-cor: (
     A700: #000000,
   )
 );
+$minha-cor-warn: (
+  50: rgb(212, 16, 131),
+  100: rgb(212, 16, 131),
+  200: rgb(212, 16, 131),
+  300: rgb(212, 16, 131),
+  400: rgb(212, 16, 131),
+  500: rgb(212, 16, 131),
+  600: rgb(212, 16, 131),
+  700: rgb(212, 16, 131),
+  800: rgb(212, 16, 131),
+  900: rgb(212, 16, 131),
+  A100: rgb(212, 16, 131),
+  A200: rgb(212, 16, 131),
+  A400: rgb(212, 16, 131),
+  A700: rgb(212, 16, 131),
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  )
+);
 $minha-cor-accent: (
   50: rgb(255,83,61),
   100: rgb(255,83,61),
@@ -73,7 +105,7 @@ $minha-cor-accent: (
 
 $custom-theme-primary: mat-palette($minha-cor);
 $custom-theme-accent: mat-palette($minha-cor-accent);
-$custom-theme-warn: mat-palette($minha-cor);
+$custom-theme-warn: mat-palette($minha-cor-warn);
 
 $my-theme: mat-light-theme($custom-theme-primary,$custom-theme-accent,$custom-theme-warn);
 

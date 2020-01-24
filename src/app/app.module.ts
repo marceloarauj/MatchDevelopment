@@ -17,6 +17,8 @@ import { PerfilPageComponent } from './pages/perfil-page/perfil-page.component';
 import { ApresentacaoPageComponent } from './pages/apresentacao-page/apresentacao-page.component';
 import { PerfilGuard } from './guards/perfil.guard';
 import { ExpBarComponent } from './pages/perfil-page/components/exp-bar/exp-bar.component';
+import { MensagemPageComponent } from './pages/mensagem-page/mensagem-page.component';
+import { CaixaMensagemComponent } from './pages/mensagem-page/caixa-mensagem/caixa-mensagem.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ExpBarComponent } from './pages/perfil-page/components/exp-bar/exp-bar.
     MenuComponent,
     PerfilPageComponent,
     ApresentacaoPageComponent,
-    ExpBarComponent
+    ExpBarComponent,
+    MensagemPageComponent,
+    CaixaMensagemComponent
 
   ],
   imports: [

@@ -1,6 +1,24 @@
 <div class="container-fluid campo-mensagem">
-    <div class="row align-items-center formata-linha">
-        <mat-icon class="icone-mensagem" color="accent">mail</mat-icon>
-        <p>{{mensagem}}</p>
+    <div class="row no-gutters align-items-center formata-linha">
+        <div class="col-1">
+            <mat-icon class="icone-mensagem">mail</mat-icon>
+        </div>
+        <div class="col-2 centralizar">
+            {{remetente}}
+        </div>
+        <div class="col-6 centralizar">
+            {{mensagem}}
+        </div>
+        <div class="col-2 centralizar">
+            {{dataHora}}
+        </div>
+        <div class="col-1 remove-col-padding">
+            <button class="botao-formatado" mat-icon-button>
+                <mat-icon class="icone-encaminhar">reply</mat-icon>
+            </button>
+            <button class="botao-formatado" mat-icon-button (dblclick)="removerMensagem()">
+                <mat-icon class="icone-remove">remove_circle</mat-icon>
+            </button>
+        </div>
     </div>
 </div>

@@ -7,7 +7,7 @@ import {ExpBarComponent} from '../perfil-page/components/exp-bar/exp-bar.compone
 })
 export class PerfilPageComponent implements OnInit {
 
-  nome:String = "Marcelo de Araújo";
+  nome:String = "KaisenAlphaPvE";
   level:String  = "50";
   icon:String = "../../../assets/icones-perfil/icons/angularjs/angularjs-original.svg";
   

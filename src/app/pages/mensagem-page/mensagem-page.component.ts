@@ -12,5 +12,5 @@ export class MensagemPageComponent implements OnInit {
 
   ngOnInit() {
   }
-  mensagens =['Mensagem','Teste','Teste','Abc','DEF'];
+  mensagens =['Mensagem','Teste','Teste','Abc','DEF','Mensagem','Teste','Teste','Abc','DEF'];
 }

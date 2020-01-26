@@ -13,4 +13,36 @@
     width: 5vw;
     height: 50%;
     font-size:300%;
+    color: rgb(10, 97, 55);
+    text-shadow: 1px 1px black;
+}
+.icone-remove{
+    color:red;
+    font-size:300%;
+    display: inline;
+    transition: .7s;
+}
+.icone-remove:hover{
+    color:rgb(145, 6, 6);
+}
+
+.icone-encaminhar{
+    color:rgb(191, 204, 9);
+    text-shadow: 1px 1px black;
+    font-size:300%;
+    display: inline;
+    transition: .7s;
+}
+.icone-encaminhar:hover{
+    color:rgb(104, 110, 14);
+}
+.botao-formatado{
+    width: 3vw;
+    height:50%;
+    text-shadow: 1px 1px black;
+    outline:none;
+}
+.centralizar{
+    display:inline-block;
+    text-align: center;
 }

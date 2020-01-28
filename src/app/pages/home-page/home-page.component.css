@@ -1,0 +1,10 @@
+.home-formatado{
+    position: absolute;
+    height:90vh;
+    top:10vh;
+    width:100%;
+}
+.tamanho-formatado{
+    width:100%;
+    height:90vh;
+}

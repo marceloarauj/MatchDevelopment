@@ -21,9 +21,9 @@ export class FormValidationService {
   msgSenhaDiferente:String = "As senhas informadas são diferentes";
 
   validarEmail(f:FormControl){
-    let regex = "^[a-z0-9]+@[a-z0-9]+$";
+    let regex:RegExp = RegExp("^[a-z0-9]+@[a-z0-9]+$");
     
-    if(regex.match(f.value)){
+    if(regex.test(f.value)){
       this.emailInvalido = false;
       return null;
     }

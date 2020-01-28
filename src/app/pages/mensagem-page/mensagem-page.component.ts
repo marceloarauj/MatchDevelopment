@@ -13,4 +13,9 @@ export class MensagemPageComponent implements OnInit {
   ngOnInit() {
   }
   mensagens =['Mensagem','Teste','Teste','Abc','DEF','Mensagem','Teste','Teste','Abc','DEF'];
+
+  
+  scroll(x,y){
+    window.scroll(x,y);
+  }
 }

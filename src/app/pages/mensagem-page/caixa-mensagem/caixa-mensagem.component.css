@@ -1,7 +1,15 @@
 .campo-mensagem{
-    width:100%;
+    width:95%;
     height:10vh;
-    border-bottom:1px solid black;
+    border:1px solid gray;
+    background-color: darkgray;
+    margin-bottom: 2vh;
+    border-radius: 15px;
+    box-shadow: 2px 3px 1px black;
+    transition: .8s;
+}
+.campo-mensagem:hover{
+    background-color: rgb(196, 133, 124);
 }
 
 .formata-linha{
@@ -45,4 +53,10 @@
 .centralizar{
     display:inline-block;
     text-align: center;
+}
+
+.fonte-formatada{
+    font-family: cursive;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
 }

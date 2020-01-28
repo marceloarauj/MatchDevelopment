@@ -21,6 +21,8 @@ header.principal{
 mat-icon{
     font-size:300%;
     transition: .6s;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
 }
 mat-icon:hover{
     opacity: .6;

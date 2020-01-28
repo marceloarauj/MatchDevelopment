@@ -12,7 +12,7 @@ export class AppComponent {
     
     const rotaAtual = window.location.pathname;
     
-    return rotaAtual === "/login" || rotaAtual === "/inicio";
+    return rotaAtual === "/login" || rotaAtual === "/apresentacao";
   }
 
 }

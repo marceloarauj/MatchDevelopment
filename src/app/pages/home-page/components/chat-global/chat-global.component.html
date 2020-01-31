@@ -1,3 +1,17 @@
 <div class="container-fluid formata-tamanho">
+    <div class="row linha-mensagem">
+        <div class="col-12 modal-mensagens">
 
+        </div>
+    </div>
+    <div class="row linha-chat">
+        <div class="col-12 no-padding">
+            <mat-form-field class="enviar" appearance="outline" color="accent">
+                <button matSuffix mat-icon-button (click)="enviarMensagem()">
+                    <mat-icon>send</mat-icon>
+                </button>
+                <input placeholder="Mensagem" [(ngModel)]="mensagem" matInput/>
+            </mat-form-field>
+        </div>
+    </div>
 </div>

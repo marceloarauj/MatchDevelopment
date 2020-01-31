@@ -8,8 +8,8 @@ import {MapaDeIconesService} from '../../../../helpers/mapa-de-icones.service';
 export class BarraLateralComponent implements OnInit {
 
   constructor(private icones:MapaDeIconesService) { }
+  classeAtual = this.icones.ICONES.angular;
 
   ngOnInit() {}
-
 
 }

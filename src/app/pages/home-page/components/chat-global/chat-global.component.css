@@ -1,5 +1,31 @@
 .formata-tamanho{
     width:100%;
     height:90vh;
-    background-color: blue;
+    padding:2%;
+}
+.enviar{
+    width:100%;
+}
+.no-padding{
+    padding:0px;
+}
+.enviar button{
+    outline:none;
+}
+.linha-mensagem{
+    height:70vh;
+}
+.linha-chat{
+    height:10vh;
+}
+.modal-mensagens{
+    width:100%;
+    height:100%;
+    border-radius: 15px;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 1px darkgray;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline{
+    color:black;
 }

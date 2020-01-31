@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {MapaDeIconesService} from '../../../../helpers/mapa-de-icones.service';
 @Component({
   selector: 'BarraLateral',
   templateUrl: './barra-lateral.component.html',
@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarraLateralComponent implements OnInit {
 
-  constructor() { }
+  constructor(private icones:MapaDeIconesService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+
 
 }

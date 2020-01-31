@@ -9,10 +9,11 @@ export class MapaDeIconesService {
   urlIcones = "./../assets/icones-perfil/icons";
 
   public ICONES = {
-    angular: this.urlIcones.toString() + "/angularjs/angularjs-original.svg",
-    csharp: this.urlIcones.toString() + "/csharp/csharp-original.svg",
-    java: this.urlIcones.toString() + "/java/java-original.svg",
-    python: this.urlIcones.toString() + "/python/python-original.svg",
-    postgresql: this.urlIcones.toString() +"/postgresql/postgresql.svg"
+    angular: this.urlIcones + "/angularjs/angularjs-original.svg",
+    csharp: this.urlIcones + "/csharp/csharp-original.svg",
+    java: this.urlIcones + "/java/java-original.svg",
+    python: this.urlIcones + "/python/python-original.svg",
+    postgresql: this.urlIcones +"/postgresql/postgresql-original.svg",
+    ruby: this.urlIcones + "/ruby/ruby-original.svg"
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {LoginService} from '../login-page/login.service';
 import {FormValidationService} from '../login-page/form-validation.service';
 import { Router } from '@angular/router';
+import { AutenticadoService } from 'src/app/autenticado.service';
 @Component({
   selector: 'LoginPage',
   templateUrl: './login-page.component.html',
@@ -21,7 +22,8 @@ export class LoginPageComponent{
   constructor(
       private objetoLogin:LoginService, 
       private objetoRoute:Router,
-      private formValidate:FormValidationService
+      public formValidate:FormValidationService,
+      private autenticar:AutenticadoService
     ) 
     {}
 
@@ -33,7 +35,10 @@ export class LoginPageComponent{
    let retorno = await this.objetoLogin.efetuarLogin({'Login':this.login,'Senha':this.senha});
    
    if(retorno.status === "OK"){
-    this.objetoRoute.navigateByUrl('/perfil',{state:{Teste:"Sucesso!"}});
+     
+    this.autenticar.SetAutenticado(true);
+    this.objetoRoute.navigateByUrl('/inicio',{state:{Teste:"Sucesso!"}});
+
    }else{
 
     alert("ERRO");

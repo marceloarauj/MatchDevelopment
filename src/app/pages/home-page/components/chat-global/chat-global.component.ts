@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {ChatService} from '../chat-global/chat.service';
+import { Component, OnInit, Input } from '@angular/core';
+import {ChatWsService} from 'src/app/helpers/chat-ws.service';
+import { BehaviorSubject } from 'rxjs';
 @Component({
   selector: 'ChatGlobal',
   templateUrl: './chat-global.component.html',
@@ -7,15 +8,28 @@ import {ChatService} from '../chat-global/chat.service';
 })
 export class ChatGlobalComponent implements OnInit {
 
-  constructor(private chatServ:ChatService) { }
+  constructor(private chatWS:ChatWsService) { 
+  }
 
   mensagem:String = "";
-
+  mensagensAnteriores:String[] = new Array();
+  comportamentoMensagem:BehaviorSubject<String>;
+  
   enviarMensagem(){
-    this.chatServ.enviarMensagem(this.mensagem);
+    this.chatWS.enviarMensagemGlobal(this.mensagem);
   }
+  
 
   ngOnInit() {
+    this.chatWS.conectarChatGlobal();
+    this.chatWS.receberMensagemGlobal();
+    this.comportamentoMensagem = this.chatWS.obterComportamento();
   }
 
+  ngAfterViewInit(): void {
+    this.comportamentoMensagem.subscribe(msg =>{
+      if(msg !== "" && msg !== undefined && msg !== null)
+        this.mensagensAnteriores.push(msg);
+    });
+  }
 }

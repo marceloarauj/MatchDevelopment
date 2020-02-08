@@ -37,7 +37,7 @@ export class LoginPageComponent{
    if(retorno.status === "OK"){
      
     this.autenticar.SetAutenticado(true);
-    this.objetoRoute.navigateByUrl('/inicio',{state:{Teste:"Sucesso!"}});
+    this.objetoRoute.navigateByUrl('/perfil',{state:{Teste:"Sucesso!"}});
 
    }else{
 

@@ -22,6 +22,7 @@ import { CaixaMensagemComponent } from './pages/mensagem-page/caixa-mensagem/cai
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { BarraLateralComponent } from './pages/home-page/components/barra-lateral/barra-lateral.component';
 import { ChatGlobalComponent } from './pages/home-page/components/chat-global/chat-global.component';
+import { MensagemUsuarioComponent } from './pages/home-page/components/mensagem-usuario/mensagem-usuario.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ChatGlobalComponent } from './pages/home-page/components/chat-global/ch
     CaixaMensagemComponent,
     HomePageComponent,
     BarraLateralComponent,
-    ChatGlobalComponent
+    ChatGlobalComponent,
+    MensagemUsuarioComponent
 
   ],
   imports: [

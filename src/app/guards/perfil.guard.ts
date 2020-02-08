@@ -13,8 +13,8 @@ export class PerfilGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    
-      return this.autenticado.IsAutenticado();
+      return true;
+      //return this.autenticado.IsAutenticado();
   }
   
 }

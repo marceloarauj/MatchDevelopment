@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {ChatWsService} from 'src/app/helpers/chat-ws.service';
 import { BehaviorSubject } from 'rxjs';
+import {MensagemUsuarioComponent} from '../mensagem-usuario/mensagem-usuario.component';
 @Component({
   selector: 'ChatGlobal',
   templateUrl: './chat-global.component.html',

@@ -23,6 +23,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { BarraLateralComponent } from './pages/home-page/components/barra-lateral/barra-lateral.component';
 import { ChatGlobalComponent } from './pages/home-page/components/chat-global/chat-global.component';
 import { MensagemUsuarioComponent } from './pages/home-page/components/mensagem-usuario/mensagem-usuario.component';
+import {CookieService} from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,7 @@ import { MensagemUsuarioComponent } from './pages/home-page/components/mensagem-
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [PerfilGuard],
+  providers: [PerfilGuard,CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

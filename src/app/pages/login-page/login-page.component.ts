@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import {LoginService} from '../login-page/login.service';
 import {FormValidationService} from '../login-page/form-validation.service';
 import { Router } from '@angular/router';
-import { AutenticadoService } from 'src/app/autenticado.service';
 @Component({
   selector: 'LoginPage',
   templateUrl: './login-page.component.html',
@@ -23,7 +22,6 @@ export class LoginPageComponent{
       private objetoLogin:LoginService, 
       private objetoRoute:Router,
       public formValidate:FormValidationService,
-      private autenticar:AutenticadoService
     ) 
     {}
 
@@ -36,7 +34,6 @@ export class LoginPageComponent{
    
    if(retorno.status === "OK"){
      
-    this.autenticar.SetAutenticado(true);
     this.objetoRoute.navigateByUrl('/perfil',{state:{Teste:"Sucesso!"}});
 
    }else{

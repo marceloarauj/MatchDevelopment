@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
-import * as signalrChat from "@aspnet/signalr";
+import * as signalrChat from "@microsoft/signalr";
 import { BehaviorSubject } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ChatWsService {
 
-  constructor() { }
+  constructor(private cookies:CookieService) { }
 
   private conexao: signalrChat.HubConnection;
   private comportamentoMensagem:BehaviorSubject<String> = new BehaviorSubject<String>("");
@@ -15,10 +16,15 @@ export class ChatWsService {
   public conectarChatGlobal(){
 
     this.conexao = new signalrChat.HubConnectionBuilder()
-        .withUrl("http://localhost:5000/WSglobal",{skipNegotiation:true,
-                  transport: signalrChat.HttpTransportType.WebSockets}).build();
+        .withUrl("http://localhost:5000/WSglobal",
+                 {skipNegotiation:true,
+                  transport: signalrChat.HttpTransportType.WebSockets,
+                  accessTokenFactory:() =>{ 
+                    return this.cookies.get("AUTH_TOKEN");
+                  }
+                  }).build();
 
-    this.conexao.start().catch(error =>alert("Erro na conexão"));
+    this.conexao.start();
   }
 
   public obterComportamento():BehaviorSubject<String>{

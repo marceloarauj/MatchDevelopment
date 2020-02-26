@@ -12,12 +12,12 @@ export class ChatGlobalComponent implements OnInit {
   constructor(private chatWS:ChatWsService) { 
   }
 
-  mensagem:String = "";
+  mensagemEnvio:String = "";
   mensagensAnteriores:String[] = new Array();
   comportamentoMensagem:BehaviorSubject<String>;
   
   enviarMensagem(){
-    this.chatWS.enviarMensagemGlobal(this.mensagem);
+    this.chatWS.enviarMensagemGlobal(this.mensagemEnvio);
   }
   
 
@@ -29,8 +29,12 @@ export class ChatGlobalComponent implements OnInit {
 
   ngAfterViewInit(): void {
     this.comportamentoMensagem.subscribe(msg =>{
+      alert(msg)
       if(msg !== "" && msg !== undefined && msg !== null)
-        this.mensagensAnteriores.push(msg);
+        this.items.push({mensagem:msg});
     });
   }
+
+  items:Array<{mensagem:String}> = [{mensagem:'abc'},{mensagem:'def'},{mensagem:'ghi'}];
 }
+

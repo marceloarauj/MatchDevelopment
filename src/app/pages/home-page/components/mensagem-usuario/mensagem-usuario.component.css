@@ -2,4 +2,7 @@
     height:100%;
     width:100%;
     border: 1px solid black;
+    background:linear-gradient(50deg, rgb(226, 144, 208),rgb(212, 199, 210),rgb(201, 156, 191));
+    font-size: 2vw;
+    font-family: cursive;
 }
